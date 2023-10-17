@@ -1,0 +1,172 @@
+#pragma once
+
+UENUM(BlueprintType)
+enum class ECharacterInputActionType : uint8
+{
+	MOVE_FRONT,
+	MOVE_RIGHT,
+	ROTATION,
+
+	INTERACTION,
+	INVENTORY,
+
+	ENUM_END,
+};
+
+UENUM(BlueprintType)
+enum class EWeaponInputActionType : uint8
+{
+	L_SHIFT,
+	DODGE,
+	ATTACK_0,
+	ATTACK_1,
+	ATTACK_2,
+	LOCK_ON,
+	TAB,
+
+	ENUM_END,
+};
+
+UENUM(BlueprintType)
+enum class EWeaponAttackType : uint8
+{
+	NORMAL,
+	HEAVY,
+	DASH,
+	EXECUTE,
+	
+	EQUIP,
+	UNEQUIP,
+
+	BACKSTEP,
+
+	EVADE_FORWARD,
+	EVADE_FORWARD_LEFT,
+	EVADE_LEFTWARD,
+	EVADE_BACKWARD_LEFT,
+	EVADE_BACKWARD,
+	EVADE_BACKWARD_RIGHT,
+	EVADE_RIGHTWARD,
+	EVADE_FORWARD_RIGHT,
+
+	HIT_1,
+	HIT_2,
+	HIT_3,
+
+	GUARD_HIT_1,
+	GUARD_HIT_2,
+	GUARD_HIT_3,
+
+	GUARD_BREAK,
+
+	ENUM_END,
+	NONE,
+};
+
+UENUM(BlueprintType)
+enum class EWeaponEquipStateType : uint8
+{
+	NOWEAPON,
+	UNEQUIP,
+	EQUIP,
+	GUARD,
+
+	ENUM_END,
+};
+
+UENUM(BlueprintType)
+enum class ECharacterMoveStateType : uint8
+{
+	IDLE,
+	WALK,
+	RUN,
+	SPRINT,
+
+	ENUM_END,
+};
+
+UENUM(BlueprintType)
+enum class EMOVE_DIRECTION : uint8
+{
+	FORWARD,
+	FORWARD_RIGHT,
+	RIGHTWARD,
+	BACKWARD_RIGHT,
+	BACKWARD,
+	BACKWARD_LEFT,
+	LEFTWARD,
+	FORWARD_LEFT,
+
+	ENUM_END,
+};
+
+UENUM(BlueprintType)
+enum class EBOSS_SKILL : uint8
+{
+	CHARGE_COMBO,
+	HAND_AND_SWORD_SWING,
+	RUNNING_SIMPLE,
+	RUNNING_WITH_AOE_BLOW,
+	SWING,
+	SWING_AND_SLAM,
+	UPPERCUT,
+
+	LEFT_WALK,
+	RIGHT_WALK,
+	FORWARD_WALK,
+	BACKWARD_WALK,
+
+	DEATH,
+
+	ENUM_END,
+};
+
+
+UENUM(BlueprintType)
+enum class EITEM_ID : uint8
+{
+	NONE,
+	//소모품
+	CI_POTION,
+	CI_MEGAPOTION,
+	//장착방어구
+	EA_LEATHER_ARMOR,
+	EA_STEEL_ARMOR,
+	EA_PLATINUM_ARMOR,
+
+	ENUM_END,
+};
+
+UENUM(BlueprintType)
+enum class EITEM_TYPE : uint8
+{
+	WEAPON,
+	ARMOR,
+	ACCESSORY,
+	CONSUMABLE,
+
+	ENUM_END,
+};
+
+UENUM(BlueprintType)
+enum class EWEAPON_TYPE : uint8
+{
+	NONE,
+	MACHETA,
+	KATANA,
+
+	ENUM_END,
+};
+
+UENUM(BlueprintType)
+enum class EEFFECT_TYPE : uint8
+{
+	DEFAULT,
+	
+	PLAYER_ATTACK_HIT,
+
+	BOSS_ATTACK_HIT,
+	BOSS_ATTACK_GUARD,
+
+	ENUM_END,
+};
